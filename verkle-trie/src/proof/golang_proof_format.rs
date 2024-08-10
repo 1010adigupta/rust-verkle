@@ -13,8 +13,8 @@ pub struct SuffixDiff {
 }
 
 pub struct StateDiff {
-    stem: [u8; 31],
-    suffix_diffs: Vec<SuffixDiff>,
+    pub stem: [u8; 31],
+    pub suffix_diffs: Vec<SuffixDiff>,
 }
 
 impl StateDiff {
