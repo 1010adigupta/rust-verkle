@@ -12,7 +12,7 @@ struct SuffixDiff {
     new_value: Option<[u8; 32]>,
 }
 
-struct StateDiff {
+pub struct StateDiff {
     stem: [u8; 31],
     suffix_diffs: Vec<SuffixDiff>,
 }
