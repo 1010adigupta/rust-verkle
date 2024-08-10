@@ -6,15 +6,15 @@ use ipa_multipoint::{ipa::IPAProof, multiproof::MultiPointProof};
 
 use super::{ExtPresent, VerificationHint, VerkleProof};
 
-pub struct SuffixDiff {
+struct SuffixDiff {
     suffix: u8,
     current_value: Option<[u8; 32]>,
     new_value: Option<[u8; 32]>,
 }
 
 pub struct StateDiff {
-    pub stem: [u8; 31],
-    pub suffix_diffs: Vec<SuffixDiff>,
+    stem: [u8; 31],
+    suffix_diffs: Vec<SuffixDiff>,
 }
 
 impl StateDiff {
