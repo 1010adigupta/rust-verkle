@@ -6,7 +6,7 @@ use ipa_multipoint::{ipa::IPAProof, multiproof::MultiPointProof};
 
 use super::{ExtPresent, VerificationHint, VerkleProof};
 
-struct SuffixDiff {
+pub struct SuffixDiff {
     suffix: u8,
     current_value: Option<[u8; 32]>,
     new_value: Option<[u8; 32]>,
