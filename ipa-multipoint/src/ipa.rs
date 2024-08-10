@@ -21,6 +21,15 @@ pub struct IPAProof {
     pub a: Fr,
 }
 
+pub const STEM_SIZE: usize = 32; // move this code to a common config
+pub struct VerkleProof {
+    pub other_stems: Vec<[u8; STEM_SIZE]>,
+    pub depth_extension_present: Vec<u8>,
+    pub commitments_by_path: Vec<[u8; 32]>,
+    pub d: [u8; 32],
+    pub ipa_proof: Option<IPAProof>,
+}
+
 impl IPAProof {
     pub(crate) fn serialized_size(&self) -> usize {
         (self.L_vec.len() * 2 + 1) * 32
